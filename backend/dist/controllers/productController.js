@@ -7,7 +7,7 @@ class ProductController {
     // Criar produto (AGORA COM FOTO!)
     async create(req, res) {
         try {
-            // --- AQUI ESTAVA O ERRO: Faltava receber a 'image' ---
+            
             const { name, description, price, stock_quantity, image, image_url } = req.body;
             const seller_id = Number(req.headers['userId']);
             const productRepo = database_1.AppDataSource.getRepository(Product_1.Product);
